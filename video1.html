@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <link href="css/main.css" rel="stylesheet" />
+</head>
+<body>
+    <video controls id="thevideo" controls autoplay>
+        <source src="videos/ViewFromYWorthen.mp4" type="video/mp4">
+    </video>
+    <script>
+        
+        window.addEventListener('load',function() {
+            document.getElementById('thevideo').requestFullscreen;
+            //document.getElementById('thevideo').msRequestFullscreen;
+            //document.getElementById('thevideo').mozRequestFullScreen;
+            //document.getElementById('thevideo').webkitRequestFullScreen;
+        });
+        
+        document.getElementById('thevideo').addEventListener('ended',function() {
+            window.location = 'index.html';
+        });
+        
+        
+    </script>
+
+</body>
+</html>
